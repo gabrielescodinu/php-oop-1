@@ -24,12 +24,9 @@ $fruits = [
     'mango' => new Fruit ('mango', 'orange', 'sweet'),
 ];
 
-for ($i=0; $i < count($fruits); $i++) { 
-    var_dump($fruits);
-};
 ?>
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,10 +36,12 @@ for ($i=0; $i < count($fruits); $i++) {
 </head>
 <body>
     <main>
-        <?php for ($i=0; $i < count($fruits); $i++) { ?>
-            <h1><?php echo $fruits[$i][0]?></h1>
-            <p><?php echo $fruits[$i][1] ?></p>
+        <?php foreach ($fruits as $item) { ?>
+            <h1><?php echo $item->name?></h1>
+            <p><?php echo $item->color?></p>
+            <p><?php echo $item->taste?></p>
+            <hr>
         <?php } ?>
     </main>
 </body>
-</html> -->
+</html>
